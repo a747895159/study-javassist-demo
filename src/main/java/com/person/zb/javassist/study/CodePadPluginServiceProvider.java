@@ -1,11 +1,18 @@
 package com.person.zb.javassist.study;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.lang.instrument.Instrumentation;
 import java.lang.instrument.UnmodifiableClassException;
 
+/**
+ * 文章参考: https://www.cnblogs.com/a747895159/articles/16581120.html
+ */
+
+
 @AgentMainCondition
-@Slf4jpublic
-class CodePadPluginServiceProvider implements IPluginService {
+@Slf4j
+public class CodePadPluginServiceProvider implements IPluginService {
     @Override
     public String getPluginName() {
         return "增强插件";

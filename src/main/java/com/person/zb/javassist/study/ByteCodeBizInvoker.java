@@ -9,6 +9,8 @@ import javassist.bytecode.CodeAttribute;
 import javassist.bytecode.CodeIterator;
 import javassist.bytecode.MethodInfo;
 import javassist.expr.ExprEditor;
+import javassist.expr.MethodCall;
+import lombok.extern.slf4j.Slf4j;
 
 import java.lang.instrument.IllegalClassFormatException;
 import java.security.ProtectionDomain;
@@ -43,6 +45,7 @@ public class ByteCodeBizInvoker implements ClassFileTransformer {
 
     /**
      * 遍历method，直至找到ReportTracer标记类     *     * @param ctMethod
+     * TODO
      */
     private void addComponentScanPackage(MethodInfo methodInfo, CtMethod ctMethod) throws CannotCompileException {
         final boolean[] success = {false};
